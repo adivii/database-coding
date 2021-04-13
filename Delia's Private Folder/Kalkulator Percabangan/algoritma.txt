@@ -1,0 +1,32 @@
+ALGORITMA KALKULATOR_SEDERHANA
+{Membuat kalkulator sederhana untuk operasi penjumlahan, pengurangan, perkalian, dan pembagian}
+
+DEKLARASI
+a : real {Variabel untuk menampung bilangan pertama}
+b : real {Variabel untuk menampung bilangan kedua}
+hasil : real {Variabel untuk menampung hasil operasi}
+aritmatika : char {Variabel untuk menentukan pilihan jenis operasi}
+
+DESKRIPSI
+read(a) {Input bilangan pertama}
+read(b) {Input bilangan kedua}
+read(aritmatika) {Memilih jenis operasi (+ - / *)}
+if aritmatika = '+' then {Mengecek apakah aritmatika adalah operasi penjumlahan}
+    hasil <- a + b {Isi variabel hasil dengan nilai penjumlahan}
+else   
+    if aritmatika = '-' then {Mengecek apakah aritmatika adalah operasi pengurangan}
+        hasil <- a - b {Isi variabel hasil dengan operasi pengurangan}
+    else
+        if aritmatika = '*' then {Mengecek apakah aritmatika adalah operasi perkalian}
+            hasil <- a * b {Isi variabel hasil dengan operasi perkalian}
+        else
+            if aritmatika = '/' then {Mengecek apakah aritmatika adalah operasi pembagian}
+                hasil <- a / b {Isi variabel hasil dengan operasi pembagian}
+            else
+                write("Operasi Salah!")
+            endif
+        endif
+    endif
+endif
+
+write(hasil)
