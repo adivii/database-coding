@@ -1,0 +1,22 @@
+ALGORITMA KONVERSI_DESIMAL_KE_BINER
+
+DEKLARASI
+x : integer
+hasil : String
+
+DESKRIPSI
+read(x)
+
+while x > 0 do
+    if x mod 2 = 0 then
+        hasil <- "0" + hasil
+    else
+        if x mod 2 = 1 then
+            hasil <- "1" + hasil
+        endif
+    endif
+
+    x <- x/2
+endwhile
+
+write(hasil)
