@@ -1,0 +1,13 @@
+Judul : Aplikasi Pendukung Mental Health
+Fitur :
+- Menghubungkan seseorang dengan masalah psikologis dengan psikolog secara daring (video call/chat box)
+- Memberikan kalimat motivasi setiap hari untuk memunculkan perasaan dipedulikan
+- Mood Tracker
+
+Kegunaan dan Manfaat : Menurunkan angka bunuh diri dan self harm di masyarakat dengan meningkatkan kesehatan mental.
+
+Masalah yang diselesaikan : Kesehatan mental yang buruk pada masyarakat
+
+Bedanya : Menyediakan konsultasi langsung dengan psikolog
+
+Teknologi : Android
