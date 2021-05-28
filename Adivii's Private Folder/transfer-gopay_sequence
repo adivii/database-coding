@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-28T14:20:00.856Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="qFpsZvBQXm86ojdy0dVN" version="14.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-28T14:25:24.141Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="t-KNzqUeFekNO70NX9ud" version="14.7.2" type="github">
   <diagram id="fClVdK4lbceAPDTze5pr" name="Page-1">
     <mxGraphModel dx="806" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1700" math="0" shadow="0">
       <root>
@@ -7,11 +7,11 @@
         <mxCell id="rtpjCWKCYjxbvFvoSAVL-1" value="User" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="50" y="40" width="20" height="300" as="geometry" />
         </mxCell>
-        <mxCell id="rtpjCWKCYjxbvFvoSAVL-3" value="Menu Utama" style="shape=umlLifeline;participant=umlBoundary;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" parent="1" vertex="1">
+        <mxCell id="rtpjCWKCYjxbvFvoSAVL-3" value="menuUtama" style="shape=umlLifeline;participant=umlBoundary;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="160" y="46" width="50" height="300" as="geometry" />
         </mxCell>
         <mxCell id="qOSecb6BoytXcWiEuAzj-3" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="rtpjCWKCYjxbvFvoSAVL-3" vertex="1">
-          <mxGeometry x="20" y="104" width="10" height="46" as="geometry" />
+          <mxGeometry x="20" y="104" width="10" height="26" as="geometry" />
         </mxCell>
         <mxCell id="qOSecb6BoytXcWiEuAzj-2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="1" vertex="1">
           <mxGeometry x="55" y="140" width="10" height="80" as="geometry" />
@@ -30,6 +30,15 @@
         </mxCell>
         <mxCell id="x58TUsXRQldI4xK6XxVQ-2" value="" style="shape=umlLifeline;participant=umlBoundary;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="290" y="46" width="50" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="x58TUsXRQldI4xK6XxVQ-3" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="1">
+          <mxGeometry x="310" y="170" width="10" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="x58TUsXRQldI4xK6XxVQ-4" value="tampilkan()" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="190" y="170" as="sourcePoint" />
+            <mxPoint x="310" y="170" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
