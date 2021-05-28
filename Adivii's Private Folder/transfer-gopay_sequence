@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-28T14:25:24.141Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="t-KNzqUeFekNO70NX9ud" version="14.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-28T14:27:35.508Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="DVrXihAVEh6WO22K37Jh" version="14.7.2" type="github">
   <diagram id="fClVdK4lbceAPDTze5pr" name="Page-1">
     <mxGraphModel dx="806" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1700" math="0" shadow="0">
       <root>
@@ -14,9 +14,9 @@
           <mxGeometry x="20" y="104" width="10" height="26" as="geometry" />
         </mxCell>
         <mxCell id="qOSecb6BoytXcWiEuAzj-2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="1" vertex="1">
-          <mxGeometry x="55" y="140" width="10" height="80" as="geometry" />
+          <mxGeometry x="55" y="140" width="10" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="qOSecb6BoytXcWiEuAzj-1" value="kirimSaldo()" style="html=1;verticalAlign=bottom;endArrow=block;exitX=1.044;exitY=0.13;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="qOSecb6BoytXcWiEuAzj-2" edge="1">
+        <mxCell id="qOSecb6BoytXcWiEuAzj-1" value="kirimSaldo()" style="html=1;verticalAlign=bottom;endArrow=block;exitX=0.857;exitY=0.056;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="qOSecb6BoytXcWiEuAzj-2" edge="1">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="70" y="150" as="sourcePoint" />
             <mxPoint x="180" y="150" as="targetPoint" />
@@ -26,9 +26,9 @@
           <mxGeometry x="90" y="240" width="330" height="240" as="geometry" />
         </mxCell>
         <mxCell id="x58TUsXRQldI4xK6XxVQ-1" value="[Go-Pay]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="100" y="290" width="60" height="20" as="geometry" />
+          <mxGeometry x="90" y="270" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="x58TUsXRQldI4xK6XxVQ-2" value="" style="shape=umlLifeline;participant=umlBoundary;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="x58TUsXRQldI4xK6XxVQ-2" value="transferMenu" style="shape=umlLifeline;participant=umlBoundary;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="290" y="46" width="50" height="300" as="geometry" />
         </mxCell>
         <mxCell id="x58TUsXRQldI4xK6XxVQ-3" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="1">
@@ -38,6 +38,18 @@
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="190" y="170" as="sourcePoint" />
             <mxPoint x="310" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x58TUsXRQldI4xK6XxVQ-7" value="dispatch" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="330" y="250" as="sourcePoint" />
+            <mxPoint x="410" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x58TUsXRQldI4xK6XxVQ-8" value="dispatch" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="65" y="310" as="sourcePoint" />
+            <mxPoint x="310" y="310" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
