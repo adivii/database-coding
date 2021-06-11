@@ -1,0 +1,162 @@
+Algoritma Biasa
+
+ALGORITMA MENENTUKAN_PRIMA
+{Algoritma untuk menentukan bilangan prima dalam suatu array yang berisi bilangan}
+
+DEKLARASI
+Arr : Array [0..9999] of Integer {Penampung bilangan}
+i : Integer {Counter}
+j : Integer {Counter}
+Prima : Boolean {Menentukan prima atau tidak}
+N : Integer {Jumlah bilangan}
+
+DESKRIPSI
+read(N)
+
+for i <- 0 to N-1 do
+    read(Arr[i])
+    Prima <- True
+    for j <- 2 to Arr[i]-1 do
+        if Arr[i] mod j = 0 then
+            Prima <- False
+            Break
+        endif
+    endfor
+    if Arr[i] = 1 then
+        Prima <- False
+    endif
+    if Prima then
+        write(Arr[i],' ')
+    endif
+endfor
+
+
+Prosedur Tanpa Parameter
+
+Procedure CARI_PRIMA
+{Kondisi awal  : Semua input
+ Kondisi akhir : Bilangan prima}
+
+DEKLARASI
+Arr : Array [0..9999] of Integer {Penampung bilangan}
+i : Integer {Counter}
+j : Integer {Counter}
+Prima : Boolean {Menentukan prima atau tidak}
+
+DESKRIPSI
+for i <- 0 to N-1 do
+    read(Arr[i])
+    Prima <- True
+    for j <- 2 to Arr[i]-1 do
+        if Arr[i] mod j = 0 then
+            Prima <- False
+            Break
+        endif
+    endfor
+    if Arr[i] = 1 then
+        Prima <- False
+    endif
+    if Prima then
+        write(Arr[i],' ')
+    endif
+endfor
+
+ALGORITMA MENENTUKAN_PRIMA
+{Algoritma untuk menentukan bilangan prima dalam suatu array yang berisi bilangan}
+
+DEKLARASI
+N : Integer {Jumlah bilangan}
+
+Procedure CARI_PRIMA {Mencari bilangan prima diantara N buah bilangan}
+
+DESKRIPSI
+read(N)
+
+CARI_PRIMA
+
+
+Prosedur dengan Parameter
+
+Procedure CARI_PRIMA(input N : integer)
+{Kondisi awal  : Semua input
+ Kondisi akhir : Bilangan prima}
+
+DEKLARASI
+Arr : Array [0..9999] of Integer {Penampung bilangan}
+i : Integer {Counter}
+j : Integer {Counter}
+Prima : Boolean {Menentukan prima atau tidak}
+
+DESKRIPSI
+for i <- 0 to N-1 do
+    read(Arr[i])
+    Prima <- True
+    for j <- 2 to Arr[i]-1 do
+        if Arr[i] mod j = 0 then
+            Prima <- False
+            Break
+        endif
+    endfor
+    if Arr[i] = 1 then
+        Prima <- False
+    endif
+    if Prima then
+        write(Arr[i],' ')
+    endif
+endfor
+
+ALGORITMA MENENTUKAN_PRIMA
+{Algoritma untuk menentukan bilangan prima dalam suatu array yang berisi bilangan}
+
+DEKLARASI
+N : Integer {Jumlah bilangan}
+
+Procedure CARI_PRIMA(input N : integer) {Mencari bilangan prima diantara N buah bilangan}
+
+DESKRIPSI
+read(N)
+
+CARI_PRIMA(N)
+
+
+Fungsi
+
+Function CARI_PRIMA(input N : integer) -> Boolean
+
+DEKLARASI
+Status : Boolean
+j : integer
+
+DESKRIPSI
+Status <- True
+for j <- 2 to N do
+    if N mod j = 0 then
+        Status <- False
+        Break
+    endif
+endfor
+if N = 1 then
+    Status <- False
+endif
+
+return Status
+
+ALGORITMA MENENTUKAN_PRIMA
+{Algoritma untuk menentukan bilangan prima dalam suatu array yang berisi bilangan}
+
+DEKLARASI
+Arr : Array [0..9999] of Integer {Penampung bilangan}
+i : Integer {Counter}
+Prima : Boolean {Menentukan prima atau tidak}
+N : Integer {Jumlah bilangan}
+
+DESKRIPSI
+read(N)
+
+for i <- 0 to N-1 do
+    read(Arr[i])
+    Prima <- CARI_PRIMA(Arr[i])
+    if Prima then
+        write(Arr[i],' ')
+    endif
+endfor
