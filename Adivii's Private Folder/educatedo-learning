@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-15T07:48:48.799Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36" etag="s1EfVIBI_SDXkrwh1TgL" version="14.7.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-15T08:05:47.168Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36" etag="XTr2_SCWSez1jrPOgssl" version="14.7.8" type="github">
   <diagram id="z3HqIMTWSCRgcrq8dhcV" name="Page-1">
     <mxGraphModel dx="868" dy="515" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -41,7 +41,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="XXcqLaJGbyyGusQ_9orX-39" value="" style="rhombus;whiteSpace=wrap;html=1;rounded=1;strokeColor=#ff0000;fillColor=#3333FF;" vertex="1" parent="XXcqLaJGbyyGusQ_9orX-2">
+        <mxCell id="XXcqLaJGbyyGusQ_9orX-39" value="Kirim Feedback?" style="rhombus;whiteSpace=wrap;html=1;rounded=1;strokeColor=#ff0000;fillColor=#3333FF;" vertex="1" parent="XXcqLaJGbyyGusQ_9orX-2">
           <mxGeometry x="50" y="690" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="XXcqLaJGbyyGusQ_9orX-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="XXcqLaJGbyyGusQ_9orX-2" source="XXcqLaJGbyyGusQ_9orX-37" target="XXcqLaJGbyyGusQ_9orX-39">
@@ -71,7 +71,7 @@
         <mxCell id="XXcqLaJGbyyGusQ_9orX-12" value="Memverifikasi Akun" style="whiteSpace=wrap;html=1;rounded=1;strokeColor=#ff0000;fillColor=#3333FF;" vertex="1" parent="XXcqLaJGbyyGusQ_9orX-4">
           <mxGeometry x="40" y="90" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="XXcqLaJGbyyGusQ_9orX-14" value="" style="rhombus;whiteSpace=wrap;html=1;rounded=1;strokeColor=#ff0000;fillColor=#3333FF;" vertex="1" parent="XXcqLaJGbyyGusQ_9orX-4">
+        <mxCell id="XXcqLaJGbyyGusQ_9orX-14" value="Akun Valid?" style="rhombus;whiteSpace=wrap;html=1;rounded=1;strokeColor=#ff0000;fillColor=#3333FF;" vertex="1" parent="XXcqLaJGbyyGusQ_9orX-4">
           <mxGeometry x="60" y="170" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="XXcqLaJGbyyGusQ_9orX-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="XXcqLaJGbyyGusQ_9orX-4" source="XXcqLaJGbyyGusQ_9orX-12" target="XXcqLaJGbyyGusQ_9orX-14">
