@@ -1,5 +1,6 @@
-// Tinggal besok pagi kasih komen biar lebih jelas
-// Mantap asw
+// Admin account :
+// username : adiwijaya
+// password : ilkomp2020
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -7,36 +8,56 @@ using namespace std;
 // Class Queue
 class Queue{
 private:
+	// Menyajikan data dalam bentuk deque agar dapat dimanipulasi dari depan dan belakang
 	deque<string> data;
 
 public:
+	// Mengecek apakah Queueu kosong
 	bool isEmpty(){
+		// Queue kosong apabila jumlah data di dalamnya adalah 0
 		return data.size() == 0;
 	}
 
+	// Mengakses elemen dengan posisi paling depan
 	string getData(){
+		// Cek apakah Queue kosong atau tidak
 		if(!isEmpty()){
+			// Jika tidak kosong, kembalikan elemen paling depan
 			return data.front();
 		}else{
+			// Jika kosong, kembalikan blank ("")
 			return "";
 		}
 	}
 
+	// Tambahkan data ke dalam queue
 	void Enqueue(string newData){
+		// push data ke dalam deque (data)
+		// Masukkan dalam posisi terakhir
 		data.push_back(newData);
 	}
 
+	// Hapus data dari Queue
 	void Dequeue(){
+		// Cek apakah queue kosong atau tidak
 		if(!isEmpty()){
-			return data.pop_front();
+			// Jika tidak kosong (masih ada data)
+			// Buang data paling depan
+			data.pop_front();
 		}
 	}
 
+	// Menghapus semua elemen dalam Queue
 	void clear(){
+		// Gunakan fungsi clear untuk membersihkan deque (data)
 		data.clear();
 	}
 
+	// Mengecek elemen dalam Queue
 	bool find(string _inData){
+		// Jika data ditemukan dalam deque (data), kembalikan true
+		// Jika tidak, kembalikan false
+		// Menggunakan binary search
 		return binary_search(data.begin(), data.end(), _inData);
 	}
 };
@@ -49,60 +70,61 @@ vector<vector<string>> book_data;
 Queue request_list; // Menggunakan Class Queue
 
 // Berfungsi membaca dan memasukkan database (user, request, dan buku)
-void load_database();
-void load_databook();
-void load_request();
-void update_book_data();
-void update_request();
+void load_database(); // Membaca data username dan password
+void load_databook(); // Membaca data buku
+void load_request(); // Membaca data request yang dibuat user
+void update_book_data(); // Memperbarui data buku
+void update_request(); // Memperbarui data request dari user
 
 // Menu dan template
-void print_header();
-void start_menu();
-void main_menu();
-void admin_menu();
+void print_header(); // Template header
+void start_menu(); // Menu awal (berisi login dan register)
+void main_menu(); // Menu utama (untuk peminjaman dan pengembalian oleh user)
+void admin_menu(); // Menu admin (untuk memproses request dari user)
 
 // Berfungsi untuk login
-void login_app();
-void login_admin();
-bool validate_account(string _inUser, string _inPass);
+void login_app(); // Login user
+void login_admin(); // Login admin
+bool validate_account(string _inUser, string _inPass); // Memvalidasi akun user
 
 // Mendaftar akun
-void register_account();
-bool validate_username_availability(string _inUser);
-void submit_account(string _inUser, string _inPass);
+void register_account(); // Membuat akun
+bool validate_username_availability(string _inUser); // Mengecek ketersediaan username (tidak duplicate)
+void submit_account(string _inUser, string _inPass); // Memasukkan data user yang sudah dicek valid, ke dalam database
 
 // Membuat request
-void create_request(string req_type, string username, string req_book);
-void pinjam_buku(string _inUser, string _inId);
-void kembalikan_buku(string _inUser);
+void create_request(string req_type, string username, string req_book); // Membuat request (dari user), dan memasukkan ke dalam daftar request
+void pinjam_buku(string _inUser, string _inId); // Membuat request pinjam buku
+void kembalikan_buku(string _inUser); // Membuat request kembalikan buku
 
 // Memproses Request
-string get_request_type(string req_code);
-void proses_request(string _inUser, string req_type, string req_book);
-void give_book(string _inUser, string id);
-void take_book(string _inUser, string id);
+string get_request_type(string req_code); // Mengecek jenis request (pinjam atau kembalikan)
+void proses_request(string _inUser, string req_type, string req_book); // Mengolah request dari user (oleh admin)
+void give_book(string _inUser, string id); // Memproses peminjaman
+void take_book(string _inUser, string id); // Memproses pengembalian
 
 // Lain-lain
 string removeWhitespace(string _inStr); // Menghilangkan spasi
 
 int main(){
-	// Database loading
+	// Membaca database
 	load_database();
 	load_databook();
 	load_request();
 	
-	// Launch start menu
+	// Membuka start menu
 	start_menu();
 }
 
 void load_database(){
-	ifstream file_user;
-	ifstream file_pass;
-	string temp;
+	// Membuat variabel
+	ifstream file_user; // Menampung username
+	ifstream file_pass; // Menampung password
+	string temp; // Untuk menampung sementara
 
 	// Buka file
-	file_user.open("main_database/username.txt");
-	file_pass.open("main_database/password.txt");
+	file_user.open("main_database/username.txt"); // Membuka file yang berisi username
+	file_pass.open("main_database/password.txt"); // Membuka file yang berisi password
 
 	// Kosongkan database
 	username.clear();
@@ -114,89 +136,95 @@ void load_database(){
 		exit(0); // To terminate program
 	}else{
 		// Load isi dari file username.txt
-		while(!file_user.eof()){
-			getline(file_user,temp);
-			if(removeWhitespace(temp) != ""){
-				username.push_back(temp);
+		while(!file_user.eof()){ // Baca selama masih ada konten dalam file
+			getline(file_user,temp); // Membaca masukan dari file dan ditampung sementara pada temp
+			if(removeWhitespace(temp) != ""){ // Cek jika temp tidak kosong
+				username.push_back(temp); // Masukkan data yang dibaca ke dalam vector username
 			}
 		}
 
 		// Load isi dari file password.txt
-		while(!file_pass.eof()){
-			getline(file_pass,temp);
-			if(removeWhitespace(temp) != ""){
-				password.push_back(temp);
+		while(!file_pass.eof()){ // Baca selama masih ada konten dalam file
+			getline(file_pass,temp); // Membaca masukan dari file dan ditampung sementara pada temp
+			if(removeWhitespace(temp) != ""){ // Cek jika temp tidak kosong
+				password.push_back(temp); // Masukkan data yang dibaca ke dalam vector password
 			}
 		}
 	}
 
-	if(username.size() != password.size()){
+	// Cek jumlah username dan password
+	if(username.size() != password.size()){ // Jika tidak sama (salah satu lebih banyak)
 		cout << "Error! Jumlah username (" << username.size() << ") dan password (" << password.size() << ") tidak sama!" << endl;
 		system("pause");
-		exit(0);
+		exit(0); // Terminate program
 	}
 
+
+	// Tutup file
 	file_user.close();
 	file_pass.close();
 }
 
 void load_databook(){
-	ifstream file_book_id;
-	ifstream file_book_data;
-
-	vector<string> temp_data;
-	string temp;
+	// Membuat variabel
+	ifstream file_book_id; // Membaca file id buku
+	ifstream file_book_data; // Membaca file data buku
+	vector<string> temp_data; // Menampung sementara data buku
+	string temp; // Menampung masukan sementara
 
 	// Buka file
-	file_book_id.open("main_database/book_id.txt");
-	file_book_data.open("main_database/book_data.txt");
+	file_book_id.open("main_database/book_id.txt"); // Membuka file id buku
+	file_book_data.open("main_database/book_data.txt"); // Membuka file data buku
 
 	// Kosongkan database
 	book_id.clear();
 	book_data.clear();
 
+	// Mengecek kegagalan load pada salah satu file
 	if(file_book_id.fail() || file_book_data.fail()){
 		cout << "Error loading database!" << endl;
 		system("pause");
 		exit(0); // To terminate program
 	}else{
-		while(!file_book_id.eof()){
-			getline(file_book_id,temp);
-			if(removeWhitespace(temp) != ""){
-				book_id.push_back(temp);
+		while(!file_book_id.eof()){ // Membaca selama masih ada masukan
+			getline(file_book_id,temp); // Menampung masukan sementara dalam temp
+			if(removeWhitespace(temp) != ""){ // Cek apakah masukan kosong
+				book_id.push_back(temp); // Jika tidak kosong, masukkan data ke dalam vector book_id
 			}
 		}
 
-		while(!file_book_data.eof()){
+		while(!file_book_data.eof()){ // Membaca selama masih ada masukan
 			// Karena data buku terdiri atas 3 data, yaitu judul, penulis, dan status
 			while(temp_data.size() < 3){
-				getline(file_book_data,temp);
-				if(removeWhitespace(temp) != ""){
-					temp_data.push_back(temp);
+				getline(file_book_data,temp); // Tampung sementara masukan dalam temp
+				if(removeWhitespace(temp) != ""){ // Cek apakah masukan kosong
+					temp_data.push_back(temp); // Masukkan data ke dalam temp_data (sementara)
 				}
 
-				if(file_book_data.eof()){
+				if(file_book_data.eof()){ // Jika sudah sampai di akhir file, keluar dari looping (tanpa memperhatikan jumlah data yang sudah dibaca)
 					break;
 				}
 			}
 
-			if(temp_data.size() == 3){
-				book_data.push_back(temp_data);
-				temp_data.clear();
+			if(temp_data.size() == 3){ // Jika data sudah lengkap (judul, penulis, status)
+				book_data.push_back(temp_data); // Masukkan data sementara ke dalam vector book_data
+				temp_data.clear(); // Kosongkan data sementara untuk menampung masukan berikutnya
 			}
 		}
 	}
 
-	if(book_id.size() != book_data.size()){
+	// Mengecek jumlah id dan data
+	if(book_id.size() != book_data.size()){ // Jika tidak sama (salah satu lebih banyak), kirimkan pesan error
 		cout << "Error! Jumlah id (" << book_id.size() << ") dan data (" << book_data.size() << ") buku tidak sama!" << endl;
 		system("pause");
 		exit(0);
 	}
 
+	// Tutup file
 	file_book_id.close();
 	file_book_data.close();
 }
-
+// Sampe sini gaes
 void load_request(){
 	ifstream file_req;
 	string temp;
