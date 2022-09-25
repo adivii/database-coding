@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "title": "L",
+        "singer": "Hal",
+        "lyric":[
+            "Sungguh tak terasa sudah 7 tahun, rotasi waktu hidupku",
+            "Binar mata yang membiru hari-hari yang lesu, aku menunggu kamu"
+        ]
+    },
+    {
+        "id": 1,
+        "title": "Duka",
+        "singer": "Last Child",
+        "lyric":[
+            "Kau membunuhku dengan kepedihan ini",
+            "Kau hempaskanku kedalam retaknya hati"
+        ]
+    }
+]
